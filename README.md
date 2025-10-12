@@ -21,13 +21,27 @@ npm run build   # static build; outputs ./out and runs next-sitemap
 npm run static  # build + sitemap + GitHub Pages extras + creates out.zip
 ```
 
-Because the build is static, confirm external assets (e.g., profile image hosted at `https://lavpatel.com/lav-patel.jpeg`) stay reachable when deploying to a different domain.
+Notes
+- Static export: `next.config.mjs` uses `output: "export"`, so `next build` writes to `./out` directly.
+- Sitemap timing: the current `build` script runs `next-sitemap` after `next build`. By default, `next-sitemap` emits files into `public/`. If you want the generated sitemap files in `./out`, either:
+  - run `next-sitemap` before `next build` so they get copied from `public/` into `out`, or
+  - set `outDir: './out'` in `next-sitemap.config.js` when using a static export.
+- External assets: because the build is static, confirm remote assets (e.g., `https://lavpatel.com/lav-patel.jpeg`) remain reachable under your deployment domain, or switch to `/lav-patel.jpeg` from `public/`.
+
+## GitHub Pages CI Notes
+- The workflow in `.github/workflows/nextjs.yml` invokes `next build` directly, so `next-sitemap` is not executed during CI. Options:
+  - Replace the build step with `npm run build` to keep sitemap generation aligned with local builds, or
+  - Add a dedicated step to run `npx next-sitemap` and ensure the output lands in `./out` (see note above) so deployed artifacts include sitemaps.
+- Custom domain: if you rely on a `CNAME` file, ensure it is present in the published artifact. Either commit `public/CNAME` (it will be copied to `out`) or add a CI step to `echo 'lavpatel.com' > ./out/CNAME` before uploading the Pages artifact.
+- The `actions/configure-pages@v5` step sets image optimization off and may inject a `basePath` automatically. This is fine for a user/organization Pages root (like `lav-patel.github.io`), but verify after deploy if you later move to a project subpath.
 
 ## Content & SEO Details
 - Hero imagery and copy live directly inside `components/component.tsx`. Update the inline `experiences` array to change the work history cards.
 - The same file seeds structured data (`Person`, `WebSite`, `ItemList`) and social preview tags through `<Head>` and inline `<script type="application/ld+json">` blocks. Any schema updates must stay valid JSON.
 - Canonical URL, resume link, and contact mailto are hard-coded; adjust them together to avoid stale SEO references.
 - `public/robots.txt` and the generated `public/sitemap*.xml` assume the production hostname `https://lavpatel.com`. Regenerate with `npm run build` if the domain changes.
+
+App Router SEO tip: when adding new SEO fields, prefer the Metadata API (`export const metadata` in `app/layout.tsx` or `app/page.tsx`) over `next/head` for future-proofing. Only use `<Head>` for advanced cases not covered by the Metadata API.
 
 ## Styling System
 - Tailwind tokens are defined in `app/globals.css` and mirrored in `tailwind.config.ts`. Use semantic CSS variables (`--background`, `--primary`, etc.) to stay aligned with dark-mode support.
@@ -40,6 +54,8 @@ Because the build is static, confirm external assets (e.g., profile image hosted
 3. When adding UI, reuse shadcn primitives (`Card`, `Accordion`, `Tabs`, etc.) and import from `@/components/ui/<name>`; remind the AI to import `cn` if conditional classes are needed.
 4. Reference the Tailwind design tokens instead of raw hex values to preserve dark-mode behavior. Call out whether a component must support `className` overrides.
 5. Before requesting documentation updates, note that README content should mirror any new links, metadata, or data structures (e.g., if you add a `projects` array, document its schema here).
+6. Client vs server: add `'use client'` to components that use state, effects, Framer Motion, or browser-only APIs (see `components/AnimatedButton.tsx`). Keep pure presentational components server-side by default.
+7. Images: with `images.unoptimized: true`, `<Image>` behaves like a static `<img>` at runtime. Prefer local `/public` assets for reliability and specify `width` and `height`.
 
 ## Verification
 - `npm run lint` runs Next.js ESLint.
@@ -49,3 +65,5 @@ Because the build is static, confirm external assets (e.g., profile image hosted
 - [Next.js App Router Docs](https://nextjs.org/docs/app) for server/client component patterns.
 - [shadcn/ui Documentation](https://ui.shadcn.com) for component usage and customization.
 - [Framer Motion](https://www.framer.com/motion/) for extending button animations.
+- [next-sitemap](https://github.com/iamvishnusankar/next-sitemap) for sitemap config and `outDir` options.
+- [Deploy Next.js to GitHub Pages](https://nextjs.org/docs/app/building-your-application/deploying/static-exports#github-pages) for static export specifics.
