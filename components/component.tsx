@@ -16,54 +16,81 @@ import AnimatedButton from "./AnimatedButton";
 
 const experiences = [
   {
-    period: "2023 – Present",
-    dateStart: "2023",
+    period: "Jan '25 – Present",
+    dateStart: "2025-01",
     dateEnd: undefined,
-    title: "Manager of Data & AI Infrastructure",
+    title: "Manager, Data and AI Architecture",
     company: "University of Kansas Medical Center",
     location: "Kansas City, Kansas",
     responsibilities: [
-      "Leads data engineering and AI infrastructure strategy for clinical research systems governing data on 21+ million Medicare and Medicaid patients.",
-      "Directs cross-functional teams building production-grade healthcare data pipelines and federated analytics platforms.",
-      "Drives OMOP CDM adoption and real-world evidence generation for NIH All of Us Research Program integration.",
+      "Architected and shipped CareScriptMD end-to-end — an AI-powered clinical documentation platform that converts real-time patient visit audio into structured medical notes, eliminating hours of manual charting per clinician per day. Collaboration with Jeff Burns, MD (PI).",
+      "Designed a production-grade clinical AI system: real-time audio capture, OpenAI Whisper deployed as a custom MLflow serving endpoint on Databricks, and multi-model LLM orchestration (Claude, Llama) for structured note generation — all within HIPAA-compliant infrastructure.",
+      "Engineered a production ML pipeline on Databricks with auto-scaling GPU serving endpoints and hybrid model routing strategy (Claude for accuracy-critical notes, Llama for high-volume intake), reducing inference costs.",
+      "Navigated dual-track institutional compliance — secured IRB approval, drove security reviews across both university and hospital systems, and cleared the regulatory path for clinical AI deployment.",
     ],
   },
   {
-    period: "Feb '21 – 2023",
+    period: "Feb '21 – Jan '25",
     dateStart: "2021-02",
-    dateEnd: "2023",
+    dateEnd: "2025-01",
     title: "Senior Team Lead — Biomedical Informatics Software Engineer",
     company: "University of Kansas Medical Center",
     location: "Kansas City, Kansas",
     responsibilities: [
-      "Led a cross-functional team of 10 engineers designing and deploying a next-generation biomedical informatics platform.",
-      "Architected a COVID-19 data pipeline connecting approximately 10 hospitals in 7 days — a process that typically takes 1.5 months.",
-      "Headed the Knowledge Discovery Team and co-authored 20+ papers on COVID-19 as a member of the 4CE Consortium.",
+      "Spearheaded the AllofUs Heartland consortium as Lead Software Engineer — built OMOP CDM from scratch and made the codebase available across University of Missouri, University of Iowa, and UNMC.",
+      "Directed a 10-engineer cross-functional team building enterprise-scale biomedical informatics systems.",
+      "Architected a COVID-19 data pipeline connecting 10 hospitals in 7 days — a process that typically takes 1.5 months.",
+      "Drove a 20-publication research program as head of the Knowledge Discovery Team, contributing to the international 4CE Consortium.",
     ],
   },
   {
-    period: "Aug '20 – Mar '21",
+    period: "Aug '20 – Feb '21",
     dateStart: "2020-08",
-    dateEnd: "2021-03",
-    title: "Team Lead — Biomedical Informatics Software Engineer",
+    dateEnd: "2021-02",
+    title: "Team Lead — Biomedical Informatics Software Engineer | Solutions Architect",
     company: "University of Kansas Medical Center",
     location: "Kansas City, Kansas",
     responsibilities: [
-      "Optimized PCORnet Common Data Model (CDM) processing pipeline from 233 hours to 5 hours — a 47x performance improvement.",
-      "Leveraged Python, Java, Apache Spark, SQL, Airflow, Bash, and Jenkins to modernize ETL infrastructure.",
+      "Delivered a 47x performance improvement on the PCORnet Common Data Model pipeline (233 hours → 5 hours) — a CDC, NIH, FDA, and PCORI-funded national data infrastructure.",
     ],
   },
   {
-    period: "Feb '19 – Sep '20",
+    period: "Feb '19 – Aug '20",
     dateStart: "2019-02",
-    dateEnd: "2020-09",
-    title: "Biomedical Informatics Software Engineer",
+    dateEnd: "2020-08",
+    title: "Biomedical Informatics Software Engineer | Data Engineer",
     company: "University of Kansas Medical Center",
     location: "Kansas City, Missouri",
     responsibilities: [
-      "Reduced data pipeline processing time from 4 hours to 5 minutes by redesigning core ETL architecture.",
-      "Optimized the main Extract-Transform-Load process, decreasing run time from 28 days to 7 days.",
+      "Re-architected core data pipeline systems to significantly improve speed and flexibility.",
+      "Optimized the department's main ETL process, decreasing run time from 28 days to 7 days.",
       "Debugged and optimized i2b2, an open-source clinical data warehouse, achieving sub-second query performance.",
+    ],
+  },
+  {
+    period: "Sep '17 – Feb '19",
+    dateStart: "2017-09",
+    dateEnd: "2019-02",
+    title: "Senior Enterprise Systems Engineer | DevOps Engineer",
+    company: "University of Kansas Medical Center",
+    location: "Kansas City, Missouri",
+    responsibilities: [
+      "Owned security and governance for 21M+ Medicare and Medicaid patient records, enforcing NIST-850, HIPAA, and CIS benchmark standards — zero breaches.",
+      "Shipped federated query infrastructure across 50+ hospitals in 15 days, delivering instantaneous cross-institutional results.",
+      "Drove Infrastructure as Code adoption (Terraform, Azure, Docker, K8s, Ansible, Jenkins).",
+    ],
+  },
+  {
+    period: "Dec '16 – Sep '17",
+    dateStart: "2016-12",
+    dateEnd: "2017-09",
+    title: "Enterprise Systems Engineer | Distributed Backend Systems",
+    company: "University of Kansas Medical Center",
+    location: "Kansas City, Missouri",
+    responsibilities: [
+      "Implemented distributed systems architecture (Spark on Azure) to reduce hospital data loading from 2 days to 4 hours.",
+      "Deployed REDCap with custom add-on software, streamlining hospital resident evaluations from a week to instantaneous results.",
+      "Spearheaded golden OS image creation, reducing server build time from 1 month to 10 days.",
     ],
   },
 ];
@@ -148,12 +175,12 @@ const faqs = [
   {
     question: "Who is Lav Patel?",
     answer:
-      "Lav Patel is Manager of Data & AI Infrastructure at the University of Kansas Medical Center (KUMC). He is an EB-1 Extraordinary Ability holder with 24 peer-reviewed publications, over 1,031 citations, and an h-index of 17. He serves on the editorial board of npj Digital Medicine and is a member of the 4CE Consortium, a Harvard-led federated research network spanning 96 hospitals across 5 countries.",
+      "Lav Patel is Manager, Data and AI Architecture at the University of Kansas Medical Center (KUMC), where he architected and shipped CareScriptMD — an AI-powered clinical documentation platform. He is an EB-1 Extraordinary Ability holder with 24 peer-reviewed publications, over 1,031 citations, and an h-index of 17. He serves on the editorial board of npj Digital Medicine and is a member of the 4CE Consortium, a Harvard-led federated research network spanning 96 hospitals across 5 countries.",
   },
   {
     question: "What is Lav Patel's area of expertise?",
     answer:
-      "Lav Patel specializes in healthcare data infrastructure, AI/ML systems for clinical research, and federated data networks. His expertise spans OMOP and PCORnet Common Data Models, clinical NLP, real-world evidence generation, and large-scale EHR data pipelines. He has led data engineering initiatives serving over 21 million Medicare and Medicaid patients.",
+      "Lav Patel specializes in building AI products for healthcare, clinical data architecture, and federated data networks. He architected CareScriptMD, a production AI clinical documentation platform using Whisper, Claude, and Llama. His expertise spans OMOP and PCORnet Common Data Models, clinical NLP, real-world evidence generation, and large-scale EHR data pipelines. Over six roles at KUMC, he has progressed from distributed systems engineering to leading AI product development in regulated environments.",
   },
   {
     question: "What has Lav Patel published?",
@@ -279,41 +306,43 @@ export function Component() {
               <div className="space-y-6">
                 <div className="space-y-2">
                   <p className="text-blue-400 font-medium text-sm uppercase tracking-widest">
-                    Manager of Data &amp; AI Infrastructure
+                    Manager, Data and AI Architecture
                   </p>
                   <h1 className="text-5xl lg:text-6xl font-bold text-white text-balance">
                     Lav Patel
                   </h1>
                   <p className="text-lg text-slate-300 max-w-lg">
-                    Leading healthcare data engineering and AI infrastructure at the University of Kansas Medical Center — enabling clinical research at scale for 21+ million patients.
+                    Architecting AI products for healthcare at KUMC. Shipped CareScriptMD — an AI clinical documentation platform built on Whisper, Claude, and Llama. 24 publications. EB-1 Extraordinary Ability.
                   </p>
                 </div>
 
                 {/* Credential badges */}
                 <div className="flex flex-wrap gap-2">
                   <Badge className="bg-amber-500/90 text-white hover:bg-amber-400 font-semibold">EB-1 Extraordinary Ability</Badge>
+                  <Badge className="bg-[#1e3055] text-slate-200 hover:bg-[#243b67]">CareScriptMD</Badge>
                   <Badge className="bg-[#1e3055] text-slate-200 hover:bg-[#243b67]">24 Publications</Badge>
                   <Badge className="bg-[#1e3055] text-slate-200 hover:bg-[#243b67]">1,031 Citations</Badge>
                   <Badge className="bg-[#1e3055] text-slate-200 hover:bg-[#243b67]">h-index 17</Badge>
                   <Badge className="bg-[#1e3055] text-slate-200 hover:bg-[#243b67]">npj Digital Medicine Board</Badge>
                   <Badge className="bg-[#1e3055] text-slate-200 hover:bg-[#243b67]">4CE Consortium</Badge>
+                  <Badge className="bg-[#1e3055] text-slate-200 hover:bg-[#243b67]">Databricks Certified</Badge>
                 </div>
 
                 {/* Metrics strip */}
                 <div className="flex items-center gap-0 py-5 border-t border-slate-700/60">
                   <div className="flex-1 text-center">
-                    <p className="text-3xl font-bold text-white tracking-tight tabular-nums">21M+</p>
-                    <p className="text-xs text-slate-400 mt-1 uppercase tracking-wider">Patient Records</p>
+                    <p className="text-3xl font-bold text-white tracking-tight">CareScriptMD</p>
+                    <p className="text-xs text-slate-400 mt-1 uppercase tracking-wider">AI Product Shipped</p>
                   </div>
                   <div className="w-px h-10 bg-slate-600/50" />
                   <div className="flex-1 text-center">
-                    <p className="text-3xl font-bold text-white tracking-tight tabular-nums">96</p>
-                    <p className="text-xs text-slate-400 mt-1 uppercase tracking-wider">Hospital Network</p>
+                    <p className="text-3xl font-bold text-white tracking-tight tabular-nums">24</p>
+                    <p className="text-xs text-slate-400 mt-1 uppercase tracking-wider">Publications</p>
                   </div>
                   <div className="w-px h-10 bg-slate-600/50" />
                   <div className="flex-1 text-center">
-                    <p className="text-3xl font-bold text-white tracking-tight tabular-nums">10 yrs</p>
-                    <p className="text-xs text-slate-400 mt-1 uppercase tracking-wider">at KUMC</p>
+                    <p className="text-3xl font-bold text-white tracking-tight">EB-1</p>
+                    <p className="text-xs text-slate-400 mt-1 uppercase tracking-wider">Extraordinary Ability</p>
                   </div>
                 </div>
 
@@ -337,7 +366,7 @@ export function Component() {
               <div className="flex justify-center md:justify-end order-first md:order-last">
                 <figure>
                   <Image
-                    alt="Lav Patel, Healthcare Data and AI Infrastructure Leader at KUMC"
+                    alt="Lav Patel, Manager of Data and AI Architecture at KUMC"
                     className="rounded-2xl shadow-[0_0_60px_rgba(37,99,235,0.15)] ring-1 ring-white/10"
                     height={380}
                     width={380}
@@ -345,7 +374,7 @@ export function Component() {
                     priority={true}
                   />
                   <figcaption className="sr-only">
-                    Lav Patel — Manager of Data &amp; AI Infrastructure, University of Kansas Medical Center
+                    Lav Patel — Manager, Data and AI Architecture, University of Kansas Medical Center
                   </figcaption>
                 </figure>
               </div>
@@ -366,10 +395,13 @@ export function Component() {
                   About Lav Patel
                 </h2>
                 <p className="mt-4 text-slate-600 leading-relaxed">
-                  Lav Patel is Manager of Data &amp; AI Infrastructure at the University of Kansas Medical Center (KUMC), where he leads the data engineering and AI systems powering clinical research for over 21 million Medicare and Medicaid patients. With a decade at KUMC, he has risen through four roles, driving transformational improvements in healthcare data infrastructure — including reducing a critical PCORnet ETL pipeline from 233 hours to 5 hours (47x faster) and architecting a multi-hospital COVID-19 data pipeline in just 7 days.
+                  Lav Patel is Manager, Data and AI Architecture at the University of Kansas Medical Center (KUMC). Most recently, he architected and shipped CareScriptMD — an AI-powered clinical documentation platform that converts real-time patient visit audio into structured medical notes using Whisper, Claude, and Llama, all within HIPAA-compliant infrastructure. He served as sole technical builder, navigating IRB approval and dual-track institutional compliance to clear the regulatory path for clinical AI deployment.
                 </p>
                 <p className="mt-4 text-slate-600 leading-relaxed">
-                  A recognized authority in biomedical informatics, Lav holds an EB-1 Extraordinary Ability designation from the U.S. Citizenship and Immigration Services. He has authored 24 peer-reviewed publications with 1,031 citations and an h-index of 17, and serves on the editorial board of <em>npj Digital Medicine</em>. As a member of the 4CE Consortium — a Harvard-led federated network of 300+ researchers across 96 hospitals in 5 countries — he contributes to international COVID-19 EHR research without patient data leaving institutional boundaries.
+                  Since joining KUMC in 2016, Lav has risen through six roles — from distributed systems engineering to leading AI product development in regulated environments. He previously owned security and governance for 21M+ Medicare and Medicaid patient records with zero breaches, shipped federated query infrastructure across 50+ hospitals, and delivered a 47x performance improvement on a CDC/NIH/FDA-funded national data pipeline.
+                </p>
+                <p className="mt-4 text-slate-600 leading-relaxed">
+                  A recognized authority in biomedical informatics, Lav holds an EB-1 Extraordinary Ability designation from USCIS. He has authored 24 peer-reviewed publications with 1,031 citations and an h-index of 17, and serves on the editorial board of <em>npj Digital Medicine</em>. As a member of the 4CE Consortium — a Harvard-led federated network of 300+ researchers across 96 hospitals in 5 countries — he contributes to international COVID-19 EHR research.
                 </p>
               </article>
 
@@ -379,23 +411,23 @@ export function Component() {
                   <ul className="mt-3 space-y-2 text-slate-600">
                     <li className="flex gap-2">
                       <span className="text-blue-600 font-bold mt-0.5">→</span>
-                      <span>Architected COVID-19 data pipeline connecting ~10 hospitals in 7 days (typical timeline: 1.5 months)</span>
+                      <span>Built CareScriptMD — AI clinical documentation platform using Whisper, Claude, and Llama</span>
                     </li>
                     <li className="flex gap-2">
                       <span className="text-blue-600 font-bold mt-0.5">→</span>
-                      <span>Optimized PCORnet CDM processing: 233 hours → 5 hours (47x faster)</span>
+                      <span>COVID-19 data pipeline connecting 10 hospitals in 7 days (typical: 1.5 months)</span>
                     </li>
                     <li className="flex gap-2">
                       <span className="text-blue-600 font-bold mt-0.5">→</span>
-                      <span>Secured and governed 21+ million Medicare and Medicaid patient records with zero breaches</span>
+                      <span>PCORnet CDM: 233 hours → 5 hours (47x faster). CDC/NIH/FDA/PCORI funded</span>
                     </li>
                     <li className="flex gap-2">
                       <span className="text-blue-600 font-bold mt-0.5">→</span>
-                      <span>Co-built federated data infrastructure across 50+ hospitals (4CE Consortium, 5 countries)</span>
+                      <span>Secured 21M+ Medicare/Medicaid patient records with zero breaches</span>
                     </li>
                     <li className="flex gap-2">
                       <span className="text-blue-600 font-bold mt-0.5">→</span>
-                      <span>Mapped KUMC clinical data to OMOP CDM for NIH All of Us Research Program</span>
+                      <span>Shipped federated query infrastructure across 50+ hospitals — delivered in 15 days</span>
                     </li>
                     <li className="flex gap-2">
                       <span className="text-blue-600 font-bold mt-0.5">→</span>
@@ -616,14 +648,26 @@ export function Component() {
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-slate-900 border-b-2 border-blue-600 pb-2 inline-block mb-10">
               Education &amp; Credentials
             </h2>
-            <div className="grid gap-6 md:grid-cols-2">
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               <Card className="border-slate-200">
                 <CardHeader>
-                  <CardTitle className="text-slate-900">University of Kansas Medical Center</CardTitle>
-                  <CardDescription>Biomedical Informatics</CardDescription>
+                  <CardTitle className="text-slate-900">Louisiana Tech University</CardTitle>
+                  <CardDescription>Bachelor&apos;s and Master&apos;s Degrees</CardDescription>
                 </CardHeader>
                 <CardContent className="text-slate-600 text-sm">
-                  <p>Graduate-level training in biomedical informatics, clinical data science, and healthcare IT systems at KUMC — one of the nation&apos;s leading academic medical centers.</p>
+                  <p>BS and MS from Louisiana Tech University.</p>
+                </CardContent>
+              </Card>
+              <Card className="border-slate-200">
+                <CardHeader>
+                  <CardTitle className="text-slate-900">Certifications</CardTitle>
+                  <CardDescription>Databricks &amp; Azure</CardDescription>
+                </CardHeader>
+                <CardContent className="text-slate-600 text-sm">
+                  <ul className="space-y-1">
+                    <li>Azure Databricks Platform Architect</li>
+                    <li>Databricks Certified Data Engineer Associate</li>
+                  </ul>
                 </CardContent>
               </Card>
               <Card className="border-blue-200 bg-blue-50/50 shadow-sm">
@@ -699,7 +743,7 @@ export function Component() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div>
               <p className="text-sm">
-                &copy; {new Date().getFullYear()} Lav Patel. Manager of Data &amp; AI Infrastructure, KUMC.
+                &copy; {new Date().getFullYear()} Lav Patel. Manager, Data and AI Architecture, KUMC.
               </p>
               <p className="text-xs mt-1 text-slate-500">
                 ORCID:{" "}

@@ -15,9 +15,9 @@ const schemas = [
       name: "Lav Patel",
       givenName: "Lav",
       familyName: "Patel",
-      jobTitle: "Manager of Data & AI Infrastructure",
+      jobTitle: "Manager, Data and AI Architecture",
       description:
-        "Lav Patel is Manager of Data & AI Infrastructure at the University of Kansas Medical Center (KUMC), where he leads data engineering and AI systems serving over 21 million Medicare and Medicaid patients. An EB-1 Extraordinary Ability holder recognized by USCIS, he has authored 24 peer-reviewed publications with over 1,031 citations and an h-index of 17. He serves on the editorial board of npj Digital Medicine and is a member of the 4CE Consortium, a Harvard-led federated research network spanning 96 hospitals across 5 countries.",
+        "Lav Patel is Manager, Data and AI Architecture at the University of Kansas Medical Center (KUMC), where he architected and shipped CareScriptMD — an AI-powered clinical documentation platform. An EB-1 Extraordinary Ability holder recognized by USCIS, he has authored 24 peer-reviewed publications with over 1,031 citations and an h-index of 17. He serves on the editorial board of npj Digital Medicine and is a member of the 4CE Consortium, a Harvard-led federated research network spanning 96 hospitals across 5 countries.",
       url: "https://lavpatel.com",
       email: "lavpatel39@gmail.com",
       image: {
@@ -25,7 +25,7 @@ const schemas = [
         url: "https://lavpatel.com/lav-patel.jpeg",
         width: 800,
         height: 800,
-        name: "Lav Patel, Manager of Data & AI Infrastructure at KUMC",
+        name: "Lav Patel, Manager, Data and AI Architecture at KUMC",
       },
       worksFor: {
         "@type": "Organization",
@@ -34,18 +34,22 @@ const schemas = [
         url: "https://www.kumc.edu",
       },
       knowsAbout: [
-        "Healthcare Data Infrastructure",
+        "AI Clinical Documentation",
+        "CareScriptMD",
+        "Healthcare Data Architecture",
         "AI and Machine Learning Systems for Healthcare",
         "Biomedical Informatics",
         "Federated Data Networks",
         "OMOP Common Data Model",
         "PCORnet Common Data Model",
         "Clinical Natural Language Processing",
+        "LLM Orchestration (Claude, Llama, Whisper)",
         "COVID-19 Research",
         "Real-World Evidence Generation",
         "Electronic Health Records",
         "Python",
         "Apache Spark",
+        "Databricks",
         "Microsoft Azure",
         "Distributed Computing",
       ],
@@ -85,7 +89,7 @@ const schemas = [
     url: "https://lavpatel.com",
     name: "Lav Patel",
     description:
-      "Official website of Lav Patel, Manager of Data & AI Infrastructure at the University of Kansas Medical Center",
+      "Official website of Lav Patel, Manager, Data and AI Architecture at the University of Kansas Medical Center",
     publisher: { "@id": PERSON_ID },
   },
   {
@@ -97,7 +101,7 @@ const schemas = [
         name: "Who is Lav Patel?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Lav Patel is Manager of Data & AI Infrastructure at the University of Kansas Medical Center (KUMC). He is an EB-1 Extraordinary Ability holder with 24 peer-reviewed publications, over 1,031 citations, and an h-index of 17. He serves on the editorial board of npj Digital Medicine and is a member of the 4CE Consortium, a Harvard-led international federated research network spanning 96 hospitals across 5 countries.",
+          text: "Lav Patel is Manager, Data and AI Architecture at the University of Kansas Medical Center (KUMC), where he architected and shipped CareScriptMD — an AI-powered clinical documentation platform. He is an EB-1 Extraordinary Ability holder with 24 peer-reviewed publications, over 1,031 citations, and an h-index of 17. He serves on the editorial board of npj Digital Medicine and is a member of the 4CE Consortium, a Harvard-led international federated research network spanning 96 hospitals across 5 countries.",
         },
       },
       {
@@ -105,7 +109,7 @@ const schemas = [
         name: "What is Lav Patel's area of expertise?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Lav Patel specializes in healthcare data infrastructure, AI and machine learning systems for clinical research, and federated data networks. His expertise spans the OMOP and PCORnet Common Data Models, clinical NLP, real-world evidence generation, and large-scale EHR data pipelines. He has led data engineering initiatives serving over 21 million Medicare and Medicaid patients and co-architected a COVID-19 data pipeline connecting hospitals across the United States and Europe.",
+          text: "Lav Patel specializes in building AI products for healthcare, clinical data architecture, and federated data networks. He architected CareScriptMD, a production AI clinical documentation platform using Whisper, Claude, and Llama. His expertise spans OMOP and PCORnet Common Data Models, clinical NLP, real-world evidence generation, and large-scale EHR data pipelines. Over six roles at KUMC, he has progressed from distributed systems engineering to leading AI product development in regulated environments.",
         },
       },
       {

@@ -1,11 +1,11 @@
-# Lav Patel — Manager of Data & AI Infrastructure
+# Lav Patel — Manager, Data and AI Architecture
 
-> Lav Patel is Manager of Data & AI Infrastructure at the University of Kansas Medical Center (KUMC), leading data engineering and AI systems for healthcare research. He is an EB-1 Extraordinary Ability holder with 24 peer-reviewed publications, 1,031 citations, and an h-index of 17.
+> Lav Patel is Manager, Data and AI Architecture at the University of Kansas Medical Center (KUMC), where he architected and shipped CareScriptMD — an AI-powered clinical documentation platform. He is an EB-1 Extraordinary Ability holder with 24 peer-reviewed publications, 1,031 citations, and an h-index of 17.
 
 ## Identity
 
 - **Full name**: Lav Patel
-- **Current title**: Manager of Data & AI Infrastructure
+- **Current title**: Manager, Data and AI Architecture
 - **Institution**: University of Kansas Medical Center (KUMC), Kansas City, Kansas
 - **ORCID**: 0000-0002-8626-137X
 - **Email**: lavpatel39@gmail.com
@@ -16,6 +16,8 @@
 ## Credentials & Recognition
 
 - **EB-1 Extraordinary Ability** — U.S. Citizenship and Immigration Services designation recognizing extraordinary ability in the sciences
+- **Azure Databricks Platform Architect**
+- **Databricks Certified Data Engineer Associate**
 - **npj Digital Medicine Editorial Board Member** — Nature Portfolio peer-reviewed journal on digital medicine
 - **4CE Consortium Member** — Harvard-led international federated COVID-19 research network; 300+ researchers, 96 hospitals, 5 countries
 - **Google Scholar**: 24 publications, 1,031 citations, h-index 17, i10-index 21
@@ -35,39 +37,52 @@ Research focus: COVID-19 data science, federated EHR analysis, real-world eviden
 
 ## Work Experience
 
-**Manager of Data & AI Infrastructure** — University of Kansas Medical Center (KUMC)
-- Leads data engineering and AI infrastructure for clinical research systems serving 21+ million Medicare and Medicaid patients
-- Manages cross-functional engineering teams building healthcare data pipelines
+**Manager, Data and AI Architecture** — University of Kansas Medical Center (KUMC) (Jan 2025 – Present)
+- Architected and shipped CareScriptMD — an AI clinical documentation platform using Whisper, Claude, and Llama within HIPAA-compliant infrastructure
+- Sole technical builder collaborating with Jeff Burns, MD (PI)
+- Navigated dual-track institutional compliance — secured IRB approval and cleared regulatory path for clinical AI deployment
 
-**Senior Team Lead — Biomedical Informatics Software Engineer** — KUMC (Feb 2021 – 2023)
-- Led team of 10 engineers building biomedical informatics systems
+**Senior Team Lead — Biomedical Informatics Software Engineer** — KUMC (Feb 2021 – Jan 2025)
+- Led a 10-engineer team building enterprise biomedical informatics systems
 - Architected COVID-19 data pipeline connecting ~10 hospitals in 7 days (typical: 1.5 months)
-- Authored 20+ papers on COVID-19 as head of the Knowledge Discovery Team
+- Drove a 20-publication research program as head of the Knowledge Discovery Team
+- Built OMOP CDM from scratch for the AllofUs Heartland consortium
 
-**Team Lead — Biomedical Informatics Software Engineer** — KUMC (Aug 2020 – Mar 2021)
-- Optimized PCORnet Common Data Model (CDM) processing from 233 hours to 5 hours (47x faster)
+**Team Lead — Biomedical Informatics Software Engineer | Solutions Architect** — KUMC (Aug 2020 – Feb 2021)
+- Delivered 47x performance improvement on PCORnet CDM pipeline (233 hours → 5 hours), CDC/NIH/FDA/PCORI funded
 
-**Biomedical Informatics Software Engineer** — KUMC (Feb 2019 – Sep 2020)
-- Reduced ETL pipeline processing from 28 days to 7 days
-- Optimized i2b2 open-source clinical data warehouse for sub-second query performance
+**Biomedical Informatics Software Engineer | Data Engineer** — KUMC (Feb 2019 – Aug 2020)
+- Optimized department ETL process from 28 days to 7 days
+- Debugged i2b2 open-source clinical data warehouse for sub-second query performance
+
+**Senior Enterprise Systems Engineer | DevOps Engineer** — KUMC (Sep 2017 – Feb 2019)
+- Owned security and governance for 21M+ Medicare/Medicaid patient records — zero breaches
+- Shipped federated query infrastructure across 50+ hospitals in 15 days
+
+**Enterprise Systems Engineer | Distributed Backend Systems** — KUMC (Dec 2016 – Sep 2017)
+- Implemented distributed systems architecture (Spark on Azure) reducing data loading from 2 days to 4 hours
 
 ## Key Achievements
 
-1. Architected COVID-19 data pipeline connecting ~10 hospitals across the U.S. in 7 days
-2. Optimized PCORnet CDM processing: 233 hours → 5 hours (47x faster)
-3. Secured and governed 21+ million Medicare and Medicaid patient records with zero breaches
-4. Co-built federated data infrastructure across 50+ hospitals (4CE Consortium)
-5. Mapped KUMC clinical data to OMOP CDM for the All of Us Research Program
+1. Built CareScriptMD — AI clinical documentation platform (Whisper + Claude + Llama)
+2. Architected COVID-19 data pipeline connecting ~10 hospitals in 7 days
+3. PCORnet CDM processing: 233 hours → 5 hours (47x faster), CDC/NIH/FDA/PCORI funded
+4. Secured 21M+ Medicare/Medicaid patient records with zero breaches
+5. Shipped federated query infrastructure across 50+ hospitals in 15 days
 6. EB-1 Extraordinary Ability designation for scientific contributions
 
 ## Technical Expertise
 
 **Languages**: Python, R, SQL, Bash, Java, C++
-**AI/ML**: PyTorch, Scikit-learn, Triton, CUDA, clinical NLP
+**AI/ML**: PyTorch, Scikit-learn, Triton, CUDA, clinical NLP, OpenAI Whisper, Claude, Llama
 **Data Infrastructure**: Apache Spark, Airflow, Databricks, Hadoop
 **Cloud**: Azure, AWS
 **Clinical Standards**: OMOP CDM, PCORnet CDM, i2b2, FHIR
-**DevOps**: Docker, Linux, Git, Jenkins, CI/CD
+**DevOps**: Docker, Kubernetes, Linux, Git, Jenkins, Terraform, Ansible, CI/CD
+
+## Education
+
+- Louisiana Tech University — BS and MS
 
 ## Affiliations
 
