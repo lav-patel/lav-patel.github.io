@@ -12,12 +12,12 @@ const schemas = [
       "@context": "https://schema.org",
       "@type": "Person",
       "@id": PERSON_ID,
-      name: "Lav Patel",
+      name: "Lav P. Patel",
       givenName: "Lav",
       familyName: "Patel",
       jobTitle: "Manager, Data and AI Architecture",
       description:
-        "Lav Patel is Manager, Data and AI Architecture at the University of Kansas Medical Center (KUMC), where he architected and shipped CareScriptMD — an AI-powered clinical documentation platform. An EB-1 Extraordinary Ability holder recognized by USCIS, he has authored 24 peer-reviewed publications with over 1,031 citations and an h-index of 17. He serves on the editorial board of npj Digital Medicine and is a member of the 4CE Consortium, a Harvard-led federated research network spanning 96 hospitals across 5 countries.",
+        "Lav P. Patel is Manager, Data and AI Architecture at the University of Kansas Medical Center (KUMC), where he architected and shipped CareScriptMD — an AI-powered clinical documentation platform. An EB-1 Extraordinary Ability holder recognized by USCIS, he has authored 24 peer-reviewed publications with over 1,031 citations and an h-index of 17. He serves on the editorial board of npj Digital Medicine and is a member of the 4CE Consortium, a Harvard-led federated research network spanning 96 hospitals across 5 countries.",
       url: "https://lavpatel.com",
       email: "lavpatel39@gmail.com",
       image: {
@@ -25,7 +25,7 @@ const schemas = [
         url: "https://lavpatel.com/lav-patel.jpeg",
         width: 800,
         height: 800,
-        name: "Lav Patel, Manager, Data and AI Architecture at KUMC",
+        name: "Lav P. Patel, Manager, Data and AI Architecture at KUMC",
       },
       worksFor: {
         "@type": "Organization",
@@ -87,9 +87,9 @@ const schemas = [
     "@type": "WebSite",
     "@id": "https://lavpatel.com/#website",
     url: "https://lavpatel.com",
-    name: "Lav Patel",
+    name: "Lav P. Patel",
     description:
-      "Official website of Lav Patel, Manager, Data and AI Architecture at the University of Kansas Medical Center",
+      "Official website of Lav P. Patel, Manager, Data and AI Architecture at the University of Kansas Medical Center",
     publisher: { "@id": PERSON_ID },
   },
   {
@@ -98,26 +98,26 @@ const schemas = [
     mainEntity: [
       {
         "@type": "Question",
-        name: "Who is Lav Patel?",
+        name: "Who is Lav P. Patel?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Lav Patel is Manager, Data and AI Architecture at the University of Kansas Medical Center (KUMC), where he architected and shipped CareScriptMD — an AI-powered clinical documentation platform. He is an EB-1 Extraordinary Ability holder with 24 peer-reviewed publications, over 1,031 citations, and an h-index of 17. He serves on the editorial board of npj Digital Medicine and is a member of the 4CE Consortium, a Harvard-led international federated research network spanning 96 hospitals across 5 countries.",
+          text: "Lav P. Patel is Manager, Data and AI Architecture at the University of Kansas Medical Center (KUMC), where he architected and shipped CareScriptMD — an AI-powered clinical documentation platform. He is an EB-1 Extraordinary Ability holder with 24 peer-reviewed publications, over 1,031 citations, and an h-index of 17. He serves on the editorial board of npj Digital Medicine and is a member of the 4CE Consortium, a Harvard-led international federated research network spanning 96 hospitals across 5 countries.",
         },
       },
       {
         "@type": "Question",
-        name: "What is Lav Patel's area of expertise?",
+        name: "What is Lav P. Patel's area of expertise?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Lav Patel specializes in building AI products for healthcare, clinical data architecture, and federated data networks. He architected CareScriptMD, a production AI clinical documentation platform using Whisper, Claude, and Llama. His expertise spans OMOP and PCORnet Common Data Models, clinical NLP, real-world evidence generation, and large-scale EHR data pipelines. Over six roles at KUMC, he has progressed from distributed systems engineering to leading AI product development in regulated environments.",
+          text: "Lav P. Patel specializes in building AI products for healthcare, clinical data architecture, and federated data networks. He architected CareScriptMD, a production AI clinical documentation platform using Whisper, Claude, and Llama. His expertise spans OMOP and PCORnet Common Data Models, clinical NLP, real-world evidence generation, and large-scale EHR data pipelines. Over six roles at KUMC, he has progressed from distributed systems engineering to leading AI product development in regulated environments.",
         },
       },
       {
         "@type": "Question",
-        name: "What has Lav Patel published?",
+        name: "What has Lav P. Patel published?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Lav Patel has authored 24 peer-reviewed publications with 1,031 citations, an h-index of 17, and an i10-index of 21 as of 2026. He has published in npj Digital Medicine, The Lancet Digital Health, JAMA Network Open, EClinicalMedicine, Scientific Reports, BMJ Open, and JAMIA. His research focuses on COVID-19 data science, federated learning for healthcare, clinical informatics, and real-world evidence.",
+          text: "Lav P. Patel has authored 24 peer-reviewed publications with 1,031 citations, an h-index of 17, and an i10-index of 21 as of 2026. He has published in npj Digital Medicine, The Lancet Digital Health, JAMA Network Open, EClinicalMedicine, Scientific Reports, BMJ Open, and JAMIA. His research focuses on COVID-19 data science, federated learning for healthcare, clinical informatics, and real-world evidence.",
         },
       },
       {
@@ -125,15 +125,15 @@ const schemas = [
         name: "What is the 4CE Consortium?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "The 4CE (Consortium for Clinical Characterization of COVID-19 by EHR) is an international federated research consortium led by Harvard Medical School. It connects over 300 researchers across 96 hospitals in 5 countries to analyze anonymized EHR data for COVID-19 research without sharing patient data across institutions. Lav Patel is a member and data infrastructure contributor to this consortium.",
+          text: "The 4CE (Consortium for Clinical Characterization of COVID-19 by EHR) is an international federated research consortium led by Harvard Medical School. It connects over 300 researchers across 96 hospitals in 5 countries to analyze anonymized EHR data for COVID-19 research without sharing patient data across institutions. Lav P. Patel is a member and data infrastructure contributor to this consortium.",
         },
       },
       {
         "@type": "Question",
-        name: "How can I contact Lav Patel?",
+        name: "How can I contact Lav P. Patel?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Lav Patel can be reached by email at lavpatel39@gmail.com. He is also active on LinkedIn at linkedin.com/in/lav-patel/ and on X (Twitter) at @lav_p_patel. His research profile and publication list are available on ORCID at orcid.org/0000-0002-8626-137X.",
+          text: "Lav P. Patel can be reached by email at lavpatel39@gmail.com. He is also active on LinkedIn at linkedin.com/in/lav-patel/ and on X (Twitter) at @lav_p_patel. His research profile and publication list are available on ORCID at orcid.org/0000-0002-8626-137X.",
         },
       },
     ],

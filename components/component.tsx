@@ -173,29 +173,29 @@ const skillCategories = [
 
 const faqs = [
   {
-    question: "Who is Lav Patel?",
+    question: "Who is Lav P. Patel?",
     answer:
-      "Lav Patel is Manager, Data and AI Architecture at the University of Kansas Medical Center (KUMC), where he architected and shipped CareScriptMD — an AI-powered clinical documentation platform. He is an EB-1 Extraordinary Ability holder with 24 peer-reviewed publications, over 1,031 citations, and an h-index of 17. He serves on the editorial board of npj Digital Medicine and is a member of the 4CE Consortium, a Harvard-led federated research network spanning 96 hospitals across 5 countries.",
+      "Lav P. Patel is Manager, Data and AI Architecture at the University of Kansas Medical Center (KUMC), where he architected and shipped CareScriptMD — an AI-powered clinical documentation platform. He is an EB-1 Extraordinary Ability holder with 24 peer-reviewed publications, over 1,031 citations, and an h-index of 17. He serves on the editorial board of npj Digital Medicine and is a member of the 4CE Consortium, a Harvard-led federated research network spanning 96 hospitals across 5 countries.",
   },
   {
-    question: "What is Lav Patel's area of expertise?",
+    question: "What is Lav P. Patel's area of expertise?",
     answer:
-      "Lav Patel specializes in building AI products for healthcare, clinical data architecture, and federated data networks. He architected CareScriptMD, a production AI clinical documentation platform using Whisper, Claude, and Llama. His expertise spans OMOP and PCORnet Common Data Models, clinical NLP, real-world evidence generation, and large-scale EHR data pipelines. Over six roles at KUMC, he has progressed from distributed systems engineering to leading AI product development in regulated environments.",
+      "Lav P. Patel specializes in building AI products for healthcare, clinical data architecture, and federated data networks. He architected CareScriptMD, a production AI clinical documentation platform using Whisper, Claude, and Llama. His expertise spans OMOP and PCORnet Common Data Models, clinical NLP, real-world evidence generation, and large-scale EHR data pipelines. Over six roles at KUMC, he has progressed from distributed systems engineering to leading AI product development in regulated environments.",
   },
   {
-    question: "What has Lav Patel published?",
+    question: "What has Lav P. Patel published?",
     answer:
-      "Lav Patel has authored 24 peer-reviewed publications with 1,031 citations, h-index 17, and i10-index 21. He has published in npj Digital Medicine, The Lancet Digital Health, JAMA Network Open, EClinicalMedicine, Scientific Reports, BMJ Open, and JAMIA. His research focuses on COVID-19 data science, federated learning for healthcare, and clinical informatics.",
+      "Lav P. Patel has authored 24 peer-reviewed publications with 1,031 citations, h-index 17, and i10-index 21. He has published in npj Digital Medicine, The Lancet Digital Health, JAMA Network Open, EClinicalMedicine, Scientific Reports, BMJ Open, and JAMIA. His research focuses on COVID-19 data science, federated learning for healthcare, and clinical informatics.",
   },
   {
     question: "What is the 4CE Consortium?",
     answer:
-      "The 4CE (Consortium for Clinical Characterization of COVID-19 by EHR) is an international federated research consortium led by Harvard Medical School. It connects 300+ researchers across 96 hospitals in 5 countries to analyze anonymized EHR data for COVID-19 research without sharing patient data across institutions. Lav Patel is a member and data infrastructure contributor.",
+      "The 4CE (Consortium for Clinical Characterization of COVID-19 by EHR) is an international federated research consortium led by Harvard Medical School. It connects 300+ researchers across 96 hospitals in 5 countries to analyze anonymized EHR data for COVID-19 research without sharing patient data across institutions. Lav P. Patel is a member and data infrastructure contributor.",
   },
   {
-    question: "How can I contact Lav Patel?",
+    question: "How can I contact Lav P. Patel?",
     answer:
-      "Lav Patel can be reached by email at lavpatel39@gmail.com. He is active on LinkedIn at linkedin.com/in/lav-patel/ and on X (Twitter) at @lav_p_patel. His research profile is available on ORCID at orcid.org/0000-0002-8626-137X.",
+      "Lav P. Patel can be reached by email at lavpatel39@gmail.com. He is active on LinkedIn at linkedin.com/in/lav-patel/ and on X (Twitter) at @lav_p_patel. His research profile is available on ORCID at orcid.org/0000-0002-8626-137X.",
   },
 ];
 
@@ -216,7 +216,7 @@ export function Component() {
       >
         <Link className="flex items-center justify-center" href="/" onClick={closeMobileMenu}>
           <span className="text-blue-400 font-bold text-lg tracking-tight">LP</span>
-          <span className="sr-only">Lav Patel</span>
+          <span className="sr-only">Lav P. Patel</span>
         </Link>
 
         {/* Desktop nav */}
@@ -309,7 +309,7 @@ export function Component() {
                     Manager, Data and AI Architecture
                   </p>
                   <h1 className="text-5xl lg:text-6xl font-bold text-white text-balance">
-                    Lav Patel — Data &amp; AI Architect
+                    Lav P. Patel — Data &amp; AI Architect
                   </h1>
                   <p className="text-lg text-slate-300 max-w-lg">
                     Architecting AI products for healthcare at KUMC. Shipped CareScriptMD — an AI clinical documentation platform built on Whisper, Claude, and Llama. 24 publications. EB-1 Extraordinary Ability.
@@ -366,7 +366,7 @@ export function Component() {
               <div className="flex justify-center md:justify-end order-first md:order-last">
                 <figure>
                   <Image
-                    alt="Lav Patel, Manager of Data and AI Architecture at KUMC"
+                    alt="Lav P. Patel, Manager of Data and AI Architecture at KUMC"
                     className="rounded-2xl shadow-[0_0_60px_rgba(37,99,235,0.15)] ring-1 ring-white/10"
                     height={380}
                     width={380}
@@ -374,7 +374,7 @@ export function Component() {
                     priority={true}
                   />
                   <figcaption className="sr-only">
-                    Lav Patel — Manager, Data and AI Architecture, University of Kansas Medical Center
+                    Lav P. Patel — Manager, Data and AI Architecture, University of Kansas Medical Center
                   </figcaption>
                 </figure>
               </div>
@@ -386,16 +386,16 @@ export function Component() {
         <section
           className="w-full py-16 md:py-24 lg:py-32 bg-slate-50 scroll-mt-20"
           id="about"
-          aria-label="About Lav Patel"
+          aria-label="About Lav P. Patel"
         >
           <div className="container px-4 md:px-6">
             <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
               <article>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-slate-900 border-b-2 border-blue-600 pb-2 inline-block">
-                  About Lav Patel
+                  About Lav P. Patel
                 </h2>
                 <p className="mt-4 text-slate-600 leading-relaxed">
-                  Lav Patel is Manager, Data and AI Architecture at the University of Kansas Medical Center (KUMC). Most recently, he architected and shipped CareScriptMD — an AI-powered clinical documentation platform that converts real-time patient visit audio into structured medical notes using Whisper, Claude, and Llama, all within HIPAA-compliant infrastructure. He served as sole technical builder, navigating IRB approval and dual-track institutional compliance to clear the regulatory path for clinical AI deployment.
+                  Lav P. Patel is Manager, Data and AI Architecture at the University of Kansas Medical Center (KUMC). Most recently, he architected and shipped CareScriptMD — an AI-powered clinical documentation platform that converts real-time patient visit audio into structured medical notes using Whisper, Claude, and Llama, all within HIPAA-compliant infrastructure. He served as sole technical builder, navigating IRB approval and dual-track institutional compliance to clear the regulatory path for clinical AI deployment.
                 </p>
                 <p className="mt-4 text-slate-600 leading-relaxed">
                   Since joining KUMC in 2016, Lav has risen through six roles — from distributed systems engineering to leading AI product development in regulated environments. He previously owned security and governance for 21M+ Medicare and Medicaid patient records with zero breaches, shipped federated query infrastructure across 50+ hospitals, and delivered a 47x performance improvement on a CDC/NIH/FDA-funded national data pipeline.
@@ -517,7 +517,7 @@ export function Component() {
               Research Collaborations
             </h2>
             <p className="text-slate-600 mb-10 max-w-2xl">
-              Lav Patel is a member of the 4CE Consortium, an international federated research network that enables COVID-19 EHR analysis across institutions without sharing patient data.
+              Lav P. Patel is a member of the 4CE Consortium, an international federated research network that enables COVID-19 EHR analysis across institutions without sharing patient data.
             </p>
             <div className="grid gap-6 md:grid-cols-3">
               <Card className="border-blue-100">
@@ -676,7 +676,7 @@ export function Component() {
                   <CardDescription>U.S. Citizenship and Immigration Services</CardDescription>
                 </CardHeader>
                 <CardContent className="text-slate-600 text-sm">
-                  <p>USCIS EB-1 Extraordinary Ability designation — reserved for individuals who have risen to the very top of their field. Awarded in recognition of Lav Patel&apos;s sustained national and international acclaim in biomedical informatics and healthcare AI.</p>
+                  <p>USCIS EB-1 Extraordinary Ability designation — reserved for individuals who have risen to the very top of their field. Awarded in recognition of Lav P. Patel&apos;s sustained national and international acclaim in biomedical informatics and healthcare AI.</p>
                 </CardContent>
               </Card>
             </div>
@@ -722,7 +722,7 @@ export function Component() {
                 href="mailto:lavpatel39@gmail.com"
                 className="inline-flex h-10 items-center justify-center rounded-md bg-blue-600 px-8 text-sm font-medium text-white shadow transition-colors hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-blue-400"
               >
-                Email Lav Patel
+                Email Lav P. Patel
               </AnimatedButton>
               <Link
                 href="https://www.linkedin.com/in/lav-patel/"
@@ -743,7 +743,7 @@ export function Component() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div>
               <p className="text-sm">
-                &copy; {new Date().getFullYear()} Lav Patel. Manager, Data and AI Architecture, KUMC.
+                &copy; {new Date().getFullYear()} Lav P. Patel. Manager, Data and AI Architecture, KUMC.
               </p>
               <p className="text-xs mt-1 text-slate-500">
                 ORCID:{" "}

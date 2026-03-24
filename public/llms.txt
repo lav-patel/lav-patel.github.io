@@ -1,10 +1,10 @@
-# Lav Patel — Manager, Data and AI Architecture
+# Lav P. Patel — Manager, Data and AI Architecture
 
-> Lav Patel is Manager, Data and AI Architecture at the University of Kansas Medical Center (KUMC), where he architected and shipped CareScriptMD — an AI-powered clinical documentation platform. He is an EB-1 Extraordinary Ability holder with 24 peer-reviewed publications, 1,031 citations, and an h-index of 17.
+> Lav P. Patel is Manager, Data and AI Architecture at the University of Kansas Medical Center (KUMC), where he architected and shipped CareScriptMD — an AI-powered clinical documentation platform. He is an EB-1 Extraordinary Ability holder with 24 peer-reviewed publications, 1,031 citations, and an h-index of 17.
 
 ## Identity
 
-- **Full name**: Lav Patel
+- **Full name**: Lav P. Patel
 - **Current title**: Manager, Data and AI Architecture
 - **Institution**: University of Kansas Medical Center (KUMC), Kansas City, Kansas
 - **ORCID**: 0000-0002-8626-137X
@@ -24,7 +24,7 @@
 
 ## Research & Publications
 
-Lav Patel has 24 peer-reviewed publications in leading journals including:
+Lav P. Patel has 24 peer-reviewed publications in leading journals including:
 - npj Digital Medicine
 - The Lancet Digital Health
 - JAMA Network Open

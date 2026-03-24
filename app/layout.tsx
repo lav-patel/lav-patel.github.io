@@ -5,30 +5,30 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Lav Patel | Manager, Data and AI Architecture",
+  title: "Lav P. Patel | Manager, Data and AI Architecture",
   description:
-    "Lav Patel — Manager, Data & AI Architecture at KUMC. Creator of CareScriptMD. EB-1 holder. 24 publications, 1,031 citations, h-index 17.",
+    "Lav P. Patel — Manager, Data & AI Architecture at KUMC. Creator of CareScriptMD. EB-1 holder. 24 publications, 1,031 citations, h-index 17.",
   icons: {
     apple: "/apple-touch-icon.png",
   },
-  authors: [{ name: "Lav Patel", url: "https://lavpatel.com" }],
+  authors: [{ name: "Lav P. Patel", url: "https://lavpatel.com" }],
   robots: { index: true, follow: true },
   alternates: { canonical: "https://lavpatel.com" },
   openGraph: {
     type: "profile",
     firstName: "Lav",
     lastName: "Patel",
-    title: "Lav Patel | Manager, Data and AI Architecture",
+    title: "Lav P. Patel | Manager, Data and AI Architecture",
     description:
-      "Lav Patel is Manager, Data and AI Architecture at KUMC. Creator of CareScriptMD. EB-1 Extraordinary Ability. 24 publications, 1,031 citations, h-index 17. npj Digital Medicine editorial board. 4CE Consortium member.",
+      "Lav P. Patel is Manager, Data and AI Architecture at KUMC. Creator of CareScriptMD. EB-1 Extraordinary Ability. 24 publications, 1,031 citations, h-index 17. npj Digital Medicine editorial board. 4CE Consortium member.",
     url: "https://lavpatel.com",
-    siteName: "Lav Patel",
+    siteName: "Lav P. Patel",
     images: [
       {
         url: "https://lavpatel.com/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Lav Patel — Manager, Data and AI Architecture at KUMC. Creator of CareScriptMD.",
+        alt: "Lav P. Patel — Manager, Data and AI Architecture at KUMC. Creator of CareScriptMD.",
       },
     ],
   },
@@ -36,13 +36,13 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@lav_p_patel",
     creator: "@lav_p_patel",
-    title: "Lav Patel | Manager, Data and AI Architecture",
+    title: "Lav P. Patel | Manager, Data and AI Architecture",
     description:
       "Manager, Data and AI Architecture at KUMC. Creator of CareScriptMD. EB-1 Extraordinary Ability. 24 publications, 1,031 citations, h-index 17.",
     images: ["https://lavpatel.com/og-image.png"],
   },
   other: {
-    "DC.creator": "Lav Patel",
+    "DC.creator": "Lav P. Patel",
     "DC.subject":
       "Healthcare Data Infrastructure, AI Systems, Biomedical Informatics",
     "citation_author": "Patel, Lav P",
