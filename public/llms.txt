@@ -1,0 +1,78 @@
+# Lav Patel — Manager of Data & AI Infrastructure
+
+> Lav Patel is Manager of Data & AI Infrastructure at the University of Kansas Medical Center (KUMC), leading data engineering and AI systems for healthcare research. He is an EB-1 Extraordinary Ability holder with 24 peer-reviewed publications, 1,031 citations, and an h-index of 17.
+
+## Identity
+
+- **Full name**: Lav Patel
+- **Current title**: Manager of Data & AI Infrastructure
+- **Institution**: University of Kansas Medical Center (KUMC), Kansas City, Kansas
+- **ORCID**: 0000-0002-8626-137X
+- **Email**: lavpatel39@gmail.com
+- **LinkedIn**: https://www.linkedin.com/in/lav-patel/
+- **GitHub**: https://github.com/lav-patel
+- **X / Twitter**: https://x.com/lav_p_patel
+
+## Credentials & Recognition
+
+- **EB-1 Extraordinary Ability** — U.S. Citizenship and Immigration Services designation recognizing extraordinary ability in the sciences
+- **npj Digital Medicine Editorial Board Member** — Nature Portfolio peer-reviewed journal on digital medicine
+- **4CE Consortium Member** — Harvard-led international federated COVID-19 research network; 300+ researchers, 96 hospitals, 5 countries
+- **Google Scholar**: 24 publications, 1,031 citations, h-index 17, i10-index 21
+
+## Research & Publications
+
+Lav Patel has 24 peer-reviewed publications in leading journals including:
+- npj Digital Medicine
+- The Lancet Digital Health
+- JAMA Network Open
+- EClinicalMedicine
+- Scientific Reports
+- BMJ Open
+- JAMIA (Journal of the American Medical Informatics Association)
+
+Research focus: COVID-19 data science, federated EHR analysis, real-world evidence generation, clinical informatics, and AI/ML for healthcare.
+
+## Work Experience
+
+**Manager of Data & AI Infrastructure** — University of Kansas Medical Center (KUMC)
+- Leads data engineering and AI infrastructure for clinical research systems serving 21+ million Medicare and Medicaid patients
+- Manages cross-functional engineering teams building healthcare data pipelines
+
+**Senior Team Lead — Biomedical Informatics Software Engineer** — KUMC (Feb 2021 – 2023)
+- Led team of 10 engineers building biomedical informatics systems
+- Architected COVID-19 data pipeline connecting ~10 hospitals in 7 days (typical: 1.5 months)
+- Authored 20+ papers on COVID-19 as head of the Knowledge Discovery Team
+
+**Team Lead — Biomedical Informatics Software Engineer** — KUMC (Aug 2020 – Mar 2021)
+- Optimized PCORnet Common Data Model (CDM) processing from 233 hours to 5 hours (47x faster)
+
+**Biomedical Informatics Software Engineer** — KUMC (Feb 2019 – Sep 2020)
+- Reduced ETL pipeline processing from 28 days to 7 days
+- Optimized i2b2 open-source clinical data warehouse for sub-second query performance
+
+## Key Achievements
+
+1. Architected COVID-19 data pipeline connecting ~10 hospitals across the U.S. in 7 days
+2. Optimized PCORnet CDM processing: 233 hours → 5 hours (47x faster)
+3. Secured and governed 21+ million Medicare and Medicaid patient records with zero breaches
+4. Co-built federated data infrastructure across 50+ hospitals (4CE Consortium)
+5. Mapped KUMC clinical data to OMOP CDM for the All of Us Research Program
+6. EB-1 Extraordinary Ability designation for scientific contributions
+
+## Technical Expertise
+
+**Languages**: Python, R, SQL, Bash, Java, C++
+**AI/ML**: PyTorch, Scikit-learn, Triton, CUDA, clinical NLP
+**Data Infrastructure**: Apache Spark, Airflow, Databricks, Hadoop
+**Cloud**: Azure, AWS
+**Clinical Standards**: OMOP CDM, PCORnet CDM, i2b2, FHIR
+**DevOps**: Docker, Linux, Git, Jenkins, CI/CD
+
+## Affiliations
+
+- University of Kansas Medical Center (KUMC) — current employer
+- 4CE Consortium (Harvard-led, international)
+- npj Digital Medicine (editorial board)
+- PCORnet (Patient-Centered Outcomes Research Network)
+- All of Us Research Program (NIH)
