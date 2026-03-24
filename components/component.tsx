@@ -178,44 +178,48 @@ export function Component() {
 
   return (
     <div className="flex flex-col min-h-[100dvh]">
+      {/* Skip to content */}
+      <a href="#about" className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[60] focus:bg-blue-600 focus:text-white focus:px-4 focus:py-2 focus:rounded-md focus:text-sm focus:font-medium">
+        Skip to main content
+      </a>
       {/* ── Header ── */}
       <header
-        className="px-4 lg:px-6 h-14 flex items-center bg-slate-900 text-white fixed left-0 right-0 z-50"
+        className="px-4 lg:px-6 h-14 flex items-center bg-[#1a2744] text-white fixed left-0 right-0 z-50"
         aria-label="Site header"
       >
         <Link className="flex items-center justify-center" href="/" onClick={closeMobileMenu}>
-          <span className="text-teal-400 font-bold text-lg tracking-tight">LP</span>
+          <span className="text-blue-400 font-bold text-lg tracking-tight">LP</span>
           <span className="sr-only">Lav Patel</span>
         </Link>
 
         {/* Desktop nav */}
         <nav className="ml-auto hidden md:flex gap-4 lg:gap-6" aria-label="Main navigation">
-          <Link className="text-sm font-medium hover:text-teal-400 transition-colors" href="/">Home</Link>
-          <Link className="text-sm font-medium hover:text-teal-400 transition-colors" href="#about">About</Link>
-          <Link className="text-sm font-medium hover:text-teal-400 transition-colors" href="#experience">Experience</Link>
-          <Link className="text-sm font-medium hover:text-teal-400 transition-colors" href="#publications">Publications</Link>
-          <Link className="text-sm font-medium hover:text-teal-400 transition-colors" href="#contact">Contact</Link>
+          <Link className="text-sm font-medium hover:text-blue-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:rounded-sm" href="/">Home</Link>
+          <Link className="text-sm font-medium hover:text-blue-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:rounded-sm" href="#about">About</Link>
+          <Link className="text-sm font-medium hover:text-blue-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:rounded-sm" href="#experience">Experience</Link>
+          <Link className="text-sm font-medium hover:text-blue-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:rounded-sm" href="#publications">Publications</Link>
+          <Link className="text-sm font-medium hover:text-blue-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:rounded-sm" href="#contact">Contact</Link>
         </nav>
 
         {/* Desktop social icons */}
         <div className="ml-4 hidden md:flex gap-2" aria-label="Social links">
-          <Link className="text-slate-400 hover:text-teal-400 transition-colors" href="https://www.linkedin.com/in/lav-patel/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+          <Link className="text-slate-400 hover:text-blue-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:rounded-sm" href="https://www.linkedin.com/in/lav-patel/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
             <LinkedinIcon className="h-5 w-5" />
           </Link>
-          <Link className="text-slate-400 hover:text-teal-400 transition-colors" href="https://x.com/lav_p_patel" aria-label="X / Twitter" target="_blank" rel="noopener noreferrer">
+          <Link className="text-slate-400 hover:text-blue-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:rounded-sm" href="https://x.com/lav_p_patel" aria-label="X / Twitter" target="_blank" rel="noopener noreferrer">
             <TwitterIcon className="h-5 w-5" />
           </Link>
-          <Link className="text-slate-400 hover:text-teal-400 transition-colors" href="https://github.com/lav-patel" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+          <Link className="text-slate-400 hover:text-blue-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:rounded-sm" href="https://github.com/lav-patel" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
             <GithubIcon className="h-5 w-5" />
           </Link>
-          <Link className="text-slate-400 hover:text-teal-400 transition-colors" href="https://orcid.org/0000-0002-8626-137X" aria-label="ORCID" target="_blank" rel="noopener noreferrer">
+          <Link className="text-slate-400 hover:text-blue-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:rounded-sm" href="https://orcid.org/0000-0002-8626-137X" aria-label="ORCID" target="_blank" rel="noopener noreferrer">
             <OrcidIcon className="h-5 w-5" />
           </Link>
         </div>
 
         {/* Mobile hamburger */}
         <button
-          className="ml-auto md:hidden text-slate-400 hover:text-white transition-colors p-1"
+          className="ml-auto md:hidden text-slate-400 hover:text-white transition-colors p-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:rounded-sm"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle navigation menu"
           aria-expanded={mobileMenuOpen}
@@ -226,7 +230,7 @@ export function Component() {
 
       {/* Mobile dropdown menu */}
       {mobileMenuOpen && (
-        <div className="fixed top-14 left-0 right-0 bg-slate-900 border-t border-slate-800 z-40 md:hidden shadow-lg">
+        <div className="fixed top-14 left-0 right-0 bg-[#1a2744] border-t border-slate-800 z-40 md:hidden shadow-lg">
           <nav className="px-4 py-3 flex flex-col" aria-label="Mobile navigation">
             {[
               { label: "Home", href: "/" },
@@ -239,23 +243,23 @@ export function Component() {
                 key={href}
                 href={href}
                 onClick={closeMobileMenu}
-                className="py-3 text-sm font-medium text-slate-200 hover:text-teal-400 transition-colors border-b border-slate-800 last:border-0"
+                className="py-3 text-sm font-medium text-slate-200 hover:text-blue-400 transition-colors border-b border-slate-800 last:border-0"
               >
                 {label}
               </Link>
             ))}
           </nav>
           <div className="px-4 py-3 border-t border-slate-800 flex gap-4">
-            <Link className="text-slate-400 hover:text-teal-400 transition-colors" href="https://www.linkedin.com/in/lav-patel/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" onClick={closeMobileMenu}>
+            <Link className="text-slate-400 hover:text-blue-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:rounded-sm" href="https://www.linkedin.com/in/lav-patel/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" onClick={closeMobileMenu}>
               <LinkedinIcon className="h-5 w-5" />
             </Link>
-            <Link className="text-slate-400 hover:text-teal-400 transition-colors" href="https://x.com/lav_p_patel" aria-label="X / Twitter" target="_blank" rel="noopener noreferrer" onClick={closeMobileMenu}>
+            <Link className="text-slate-400 hover:text-blue-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:rounded-sm" href="https://x.com/lav_p_patel" aria-label="X / Twitter" target="_blank" rel="noopener noreferrer" onClick={closeMobileMenu}>
               <TwitterIcon className="h-5 w-5" />
             </Link>
-            <Link className="text-slate-400 hover:text-teal-400 transition-colors" href="https://github.com/lav-patel" aria-label="GitHub" target="_blank" rel="noopener noreferrer" onClick={closeMobileMenu}>
+            <Link className="text-slate-400 hover:text-blue-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:rounded-sm" href="https://github.com/lav-patel" aria-label="GitHub" target="_blank" rel="noopener noreferrer" onClick={closeMobileMenu}>
               <GithubIcon className="h-5 w-5" />
             </Link>
-            <Link className="text-slate-400 hover:text-teal-400 transition-colors" href="https://orcid.org/0000-0002-8626-137X" aria-label="ORCID" target="_blank" rel="noopener noreferrer" onClick={closeMobileMenu}>
+            <Link className="text-slate-400 hover:text-blue-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:rounded-sm" href="https://orcid.org/0000-0002-8626-137X" aria-label="ORCID" target="_blank" rel="noopener noreferrer" onClick={closeMobileMenu}>
               <OrcidIcon className="h-5 w-5" />
             </Link>
           </div>
@@ -265,17 +269,19 @@ export function Component() {
       <main className="flex-1 pt-14">
         {/* ── Hero ── */}
         <section
-          className="w-full flex items-center bg-gradient-to-br from-slate-900 via-slate-800 to-teal-950 py-20 md:py-24"
+          className="w-full flex items-center bg-gradient-to-br from-[#1a2744] via-[#1e3055] to-[#243b67] py-20 md:py-28 relative overflow-hidden"
           aria-label="Introduction"
         >
-          <div className="container px-4 md:px-6">
+          {/* Subtle radial glow behind content */}
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_50%,rgba(37,99,235,0.12)_0%,transparent_70%)] pointer-events-none" />
+          <div className="container px-4 md:px-6 relative">
             <div className="grid gap-10 md:grid-cols-2 md:gap-12 items-center">
               <div className="space-y-6">
                 <div className="space-y-2">
-                  <p className="text-teal-400 font-medium text-sm uppercase tracking-widest">
+                  <p className="text-blue-400 font-medium text-sm uppercase tracking-widest">
                     Manager of Data &amp; AI Infrastructure
                   </p>
-                  <h1 className="text-5xl lg:text-6xl font-bold text-white">
+                  <h1 className="text-5xl lg:text-6xl font-bold text-white text-balance">
                     Lav Patel
                   </h1>
                   <p className="text-lg text-slate-300 max-w-lg">
@@ -285,34 +291,36 @@ export function Component() {
 
                 {/* Credential badges */}
                 <div className="flex flex-wrap gap-2">
-                  <Badge className="bg-teal-700 text-white hover:bg-teal-600">EB-1 Extraordinary Ability</Badge>
-                  <Badge className="bg-slate-700 text-slate-200 hover:bg-slate-600">24 Publications</Badge>
-                  <Badge className="bg-slate-700 text-slate-200 hover:bg-slate-600">1,031 Citations</Badge>
-                  <Badge className="bg-slate-700 text-slate-200 hover:bg-slate-600">h-index 17</Badge>
-                  <Badge className="bg-slate-700 text-slate-200 hover:bg-slate-600">npj Digital Medicine Board</Badge>
-                  <Badge className="bg-slate-700 text-slate-200 hover:bg-slate-600">4CE Consortium</Badge>
+                  <Badge className="bg-amber-500/90 text-white hover:bg-amber-400 font-semibold">EB-1 Extraordinary Ability</Badge>
+                  <Badge className="bg-[#1e3055] text-slate-200 hover:bg-[#243b67]">24 Publications</Badge>
+                  <Badge className="bg-[#1e3055] text-slate-200 hover:bg-[#243b67]">1,031 Citations</Badge>
+                  <Badge className="bg-[#1e3055] text-slate-200 hover:bg-[#243b67]">h-index 17</Badge>
+                  <Badge className="bg-[#1e3055] text-slate-200 hover:bg-[#243b67]">npj Digital Medicine Board</Badge>
+                  <Badge className="bg-[#1e3055] text-slate-200 hover:bg-[#243b67]">4CE Consortium</Badge>
                 </div>
 
                 {/* Metrics strip */}
-                <div className="grid grid-cols-3 gap-4 py-4 border-t border-slate-700">
-                  <div>
-                    <p className="text-2xl font-bold text-teal-400">21M+</p>
-                    <p className="text-xs text-slate-400">Patient Records</p>
+                <div className="flex items-center gap-0 py-5 border-t border-slate-700/60">
+                  <div className="flex-1 text-center">
+                    <p className="text-3xl font-bold text-white tracking-tight tabular-nums">21M+</p>
+                    <p className="text-xs text-slate-400 mt-1 uppercase tracking-wider">Patient Records</p>
                   </div>
-                  <div>
-                    <p className="text-2xl font-bold text-teal-400">96</p>
-                    <p className="text-xs text-slate-400">Hospital Network</p>
+                  <div className="w-px h-10 bg-slate-600/50" />
+                  <div className="flex-1 text-center">
+                    <p className="text-3xl font-bold text-white tracking-tight tabular-nums">96</p>
+                    <p className="text-xs text-slate-400 mt-1 uppercase tracking-wider">Hospital Network</p>
                   </div>
-                  <div>
-                    <p className="text-2xl font-bold text-teal-400">7 yrs</p>
-                    <p className="text-xs text-slate-400">at KUMC</p>
+                  <div className="w-px h-10 bg-slate-600/50" />
+                  <div className="flex-1 text-center">
+                    <p className="text-3xl font-bold text-white tracking-tight tabular-nums">10 yrs</p>
+                    <p className="text-xs text-slate-400 mt-1 uppercase tracking-wider">at KUMC</p>
                   </div>
                 </div>
 
                 <div className="flex flex-wrap gap-3">
                   <AnimatedButton
                     href="#contact"
-                    className="inline-flex h-10 items-center justify-center rounded-md bg-teal-600 px-8 text-sm font-medium text-white shadow transition-colors hover:bg-teal-500 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-teal-400"
+                    className="inline-flex h-10 items-center justify-center rounded-md bg-blue-600 px-8 text-sm font-medium text-white shadow transition-colors hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-blue-400"
                   >
                     Get in Touch
                   </AnimatedButton>
@@ -330,7 +338,7 @@ export function Component() {
                 <figure>
                   <Image
                     alt="Lav Patel, Healthcare Data and AI Infrastructure Leader at KUMC"
-                    className="rounded-2xl shadow-2xl ring-4 ring-teal-500/30"
+                    className="rounded-2xl shadow-[0_0_60px_rgba(37,99,235,0.15)] ring-1 ring-white/10"
                     height={380}
                     width={380}
                     src="/lav-patel.jpeg"
@@ -354,11 +362,11 @@ export function Component() {
           <div className="container px-4 md:px-6">
             <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
               <article>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-slate-900 border-b-2 border-teal-400 pb-2 inline-block">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-slate-900 border-b-2 border-blue-600 pb-2 inline-block">
                   About Lav Patel
                 </h2>
                 <p className="mt-4 text-slate-600 leading-relaxed">
-                  Lav Patel is Manager of Data &amp; AI Infrastructure at the University of Kansas Medical Center (KUMC), where he leads the data engineering and AI systems powering clinical research for over 21 million Medicare and Medicaid patients. With more than seven years at KUMC, he has risen through four roles, driving transformational improvements in healthcare data infrastructure — including reducing a critical PCORnet ETL pipeline from 233 hours to 5 hours (47x faster) and architecting a multi-hospital COVID-19 data pipeline in just 7 days.
+                  Lav Patel is Manager of Data &amp; AI Infrastructure at the University of Kansas Medical Center (KUMC), where he leads the data engineering and AI systems powering clinical research for over 21 million Medicare and Medicaid patients. With a decade at KUMC, he has risen through four roles, driving transformational improvements in healthcare data infrastructure — including reducing a critical PCORnet ETL pipeline from 233 hours to 5 hours (47x faster) and architecting a multi-hospital COVID-19 data pipeline in just 7 days.
                 </p>
                 <p className="mt-4 text-slate-600 leading-relaxed">
                   A recognized authority in biomedical informatics, Lav holds an EB-1 Extraordinary Ability designation from the U.S. Citizenship and Immigration Services. He has authored 24 peer-reviewed publications with 1,031 citations and an h-index of 17, and serves on the editorial board of <em>npj Digital Medicine</em>. As a member of the 4CE Consortium — a Harvard-led federated network of 300+ researchers across 96 hospitals in 5 countries — he contributes to international COVID-19 EHR research without patient data leaving institutional boundaries.
@@ -370,27 +378,27 @@ export function Component() {
                   <h3 className="text-xl font-bold text-slate-900">Key Achievements</h3>
                   <ul className="mt-3 space-y-2 text-slate-600">
                     <li className="flex gap-2">
-                      <span className="text-teal-600 font-bold mt-0.5">→</span>
+                      <span className="text-blue-600 font-bold mt-0.5">→</span>
                       <span>Architected COVID-19 data pipeline connecting ~10 hospitals in 7 days (typical timeline: 1.5 months)</span>
                     </li>
                     <li className="flex gap-2">
-                      <span className="text-teal-600 font-bold mt-0.5">→</span>
+                      <span className="text-blue-600 font-bold mt-0.5">→</span>
                       <span>Optimized PCORnet CDM processing: 233 hours → 5 hours (47x faster)</span>
                     </li>
                     <li className="flex gap-2">
-                      <span className="text-teal-600 font-bold mt-0.5">→</span>
+                      <span className="text-blue-600 font-bold mt-0.5">→</span>
                       <span>Secured and governed 21+ million Medicare and Medicaid patient records with zero breaches</span>
                     </li>
                     <li className="flex gap-2">
-                      <span className="text-teal-600 font-bold mt-0.5">→</span>
+                      <span className="text-blue-600 font-bold mt-0.5">→</span>
                       <span>Co-built federated data infrastructure across 50+ hospitals (4CE Consortium, 5 countries)</span>
                     </li>
                     <li className="flex gap-2">
-                      <span className="text-teal-600 font-bold mt-0.5">→</span>
+                      <span className="text-blue-600 font-bold mt-0.5">→</span>
                       <span>Mapped KUMC clinical data to OMOP CDM for NIH All of Us Research Program</span>
                     </li>
                     <li className="flex gap-2">
-                      <span className="text-teal-600 font-bold mt-0.5">→</span>
+                      <span className="text-blue-600 font-bold mt-0.5">→</span>
                       <span>EB-1 Extraordinary Ability designation — USCIS recognition for extraordinary scientific contributions</span>
                     </li>
                   </ul>
@@ -400,19 +408,19 @@ export function Component() {
                   <h3 className="text-xl font-bold text-slate-900">Recognition &amp; Affiliations</h3>
                   <ul className="mt-3 space-y-2 text-slate-600">
                     <li className="flex gap-2">
-                      <span className="text-teal-600 font-bold mt-0.5">◆</span>
+                      <span className="text-blue-600 font-bold mt-0.5">◆</span>
                       <span>EB-1 Extraordinary Ability — U.S. Citizenship and Immigration Services</span>
                     </li>
                     <li className="flex gap-2">
-                      <span className="text-teal-600 font-bold mt-0.5">◆</span>
+                      <span className="text-blue-600 font-bold mt-0.5">◆</span>
                       <span>Editorial Board Member — <em>npj Digital Medicine</em> (Nature Portfolio)</span>
                     </li>
                     <li className="flex gap-2">
-                      <span className="text-teal-600 font-bold mt-0.5">◆</span>
+                      <span className="text-blue-600 font-bold mt-0.5">◆</span>
                       <span>4CE Consortium Member — Harvard Medical School, 96 hospitals, 5 countries</span>
                     </li>
                     <li className="flex gap-2">
-                      <span className="text-teal-600 font-bold mt-0.5">◆</span>
+                      <span className="text-blue-600 font-bold mt-0.5">◆</span>
                       <span>Published in: npj Digital Medicine, The Lancet Digital Health, JAMA Network Open, EClinicalMedicine, JAMIA</span>
                     </li>
                   </ul>
@@ -429,16 +437,16 @@ export function Component() {
           aria-label="Work experience"
         >
           <div className="container px-4 md:px-6">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-slate-900 border-b-2 border-teal-400 pb-2 inline-block mb-10">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-slate-900 border-b-2 border-blue-600 pb-2 inline-block mb-10">
               Work Experience
             </h2>
             <div className="space-y-6">
               {experiences.map((exp, index) => (
                 <article
                   key={index}
-                  className="grid grid-cols-[120px_1fr] gap-6 items-start border-l-2 border-teal-400 pl-6 relative"
+                  className="grid grid-cols-[120px_1fr] gap-6 items-start border-l-2 border-blue-600 pl-6 relative"
                 >
-                  <div className="absolute -left-[9px] top-2 h-4 w-4 rounded-full bg-teal-500 ring-2 ring-white ring-offset-0" />
+                  <div className="absolute -left-[9px] top-2 h-4 w-4 rounded-full bg-blue-600 ring-2 ring-white ring-offset-0" />
                   <div>
                     <time
                       className="text-sm text-slate-500 font-medium"
@@ -449,7 +457,7 @@ export function Component() {
                   </div>
                   <div>
                     <h3 className="text-lg font-bold text-slate-900">{exp.title}</h3>
-                    <p className="text-teal-700 font-medium text-sm">{exp.company}</p>
+                    <p className="text-blue-700 font-medium text-sm">{exp.company}</p>
                     <p className="text-slate-500 text-sm mb-3">{exp.location}</p>
                     <ul className="space-y-1.5">
                       {exp.responsibilities.map((r, idx) => (
@@ -473,14 +481,14 @@ export function Component() {
           aria-label="Research collaborations"
         >
           <div className="container px-4 md:px-6">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-slate-900 border-b-2 border-teal-400 pb-2 inline-block mb-4">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-slate-900 border-b-2 border-blue-600 pb-2 inline-block mb-4">
               Research Collaborations
             </h2>
             <p className="text-slate-600 mb-10 max-w-2xl">
               Lav Patel is a member of the 4CE Consortium, an international federated research network that enables COVID-19 EHR analysis across institutions without sharing patient data.
             </p>
             <div className="grid gap-6 md:grid-cols-3">
-              <Card className="border-teal-100">
+              <Card className="border-blue-100">
                 <CardHeader>
                   <CardTitle className="text-slate-900">4CE Consortium</CardTitle>
                   <CardDescription>Harvard Medical School — Lead Institution</CardDescription>
@@ -489,7 +497,7 @@ export function Component() {
                   <p>International federated COVID-19 research network. 300+ researchers. 96 hospitals. 5 countries. Federated EHR analysis without patient data leaving institutions.</p>
                 </CardContent>
               </Card>
-              <Card className="border-teal-100">
+              <Card className="border-blue-100">
                 <CardHeader>
                   <CardTitle className="text-slate-900">Americas Network</CardTitle>
                   <CardDescription>USA &amp; Canada</CardDescription>
@@ -498,7 +506,7 @@ export function Component() {
                   <p>PCORnet and i2b2 sites across academic medical centers. KUMC contributes data infrastructure leadership and pipeline engineering to the U.S. cohort.</p>
                 </CardContent>
               </Card>
-              <Card className="border-teal-100">
+              <Card className="border-blue-100">
                 <CardHeader>
                   <CardTitle className="text-slate-900">European &amp; Asia-Pacific</CardTitle>
                   <CardDescription>UK, France, Germany, Singapore &amp; more</CardDescription>
@@ -520,7 +528,7 @@ export function Component() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10">
               <div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-slate-900 border-b-2 border-teal-400 pb-2 inline-block">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-slate-900 border-b-2 border-blue-600 pb-2 inline-block">
                   Publications
                 </h2>
                 <p className="text-slate-500 mt-1">
@@ -529,7 +537,7 @@ export function Component() {
               </div>
               <Link
                 href="https://orcid.org/0000-0002-8626-137X"
-                className="inline-flex items-center gap-1.5 text-sm text-teal-700 hover:text-teal-600 font-medium"
+                className="inline-flex items-center gap-1.5 text-sm text-blue-700 hover:text-blue-600 font-medium"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -538,9 +546,9 @@ export function Component() {
             </div>
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
               {publications.map((pub, index) => (
-                <Card key={index} className="h-full border-slate-200 hover:border-teal-300 transition-colors">
+                <Card key={index} className="h-full border-slate-200 hover:border-blue-300 hover:shadow-md transition-all duration-200">
                   <CardHeader className="pb-2">
-                    <CardDescription className="text-teal-700 font-medium text-xs uppercase tracking-wide">
+                    <CardDescription className="text-blue-700 font-medium text-xs uppercase tracking-wide">
                       {pub.journal} · {pub.year}
                     </CardDescription>
                     <CardTitle className="text-sm font-semibold text-slate-800 leading-snug">
@@ -572,7 +580,7 @@ export function Component() {
           aria-label="Technical skills"
         >
           <div className="container px-4 md:px-6">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-slate-900 border-b-2 border-teal-400 pb-2 inline-block mb-10">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-slate-900 border-b-2 border-blue-600 pb-2 inline-block mb-10">
               Technical Skills
             </h2>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -586,7 +594,7 @@ export function Component() {
                       <Badge
                         key={skill}
                         variant="outline"
-                        className="border-teal-200 text-slate-700 hover:bg-teal-50"
+                        className="border-blue-200 text-slate-700 hover:bg-blue-50"
                       >
                         {skill}
                       </Badge>
@@ -605,7 +613,7 @@ export function Component() {
           aria-label="Education and credentials"
         >
           <div className="container px-4 md:px-6">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-slate-900 border-b-2 border-teal-400 pb-2 inline-block mb-10">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-slate-900 border-b-2 border-blue-600 pb-2 inline-block mb-10">
               Education &amp; Credentials
             </h2>
             <div className="grid gap-6 md:grid-cols-2">
@@ -618,9 +626,9 @@ export function Component() {
                   <p>Graduate-level training in biomedical informatics, clinical data science, and healthcare IT systems at KUMC — one of the nation&apos;s leading academic medical centers.</p>
                 </CardContent>
               </Card>
-              <Card className="border-teal-200 bg-teal-50/50">
+              <Card className="border-blue-200 bg-blue-50/50 shadow-sm">
                 <CardHeader>
-                  <CardTitle className="text-teal-900">EB-1 Extraordinary Ability</CardTitle>
+                  <CardTitle className="text-blue-900">EB-1 Extraordinary Ability</CardTitle>
                   <CardDescription>U.S. Citizenship and Immigration Services</CardDescription>
                 </CardHeader>
                 <CardContent className="text-slate-600 text-sm">
@@ -638,7 +646,7 @@ export function Component() {
           aria-label="Frequently asked questions"
         >
           <div className="container px-4 md:px-6">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-slate-900 border-b-2 border-teal-400 pb-2 inline-block mb-10">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-slate-900 border-b-2 border-blue-600 pb-2 inline-block mb-10">
               Frequently Asked Questions
             </h2>
             <div className="grid gap-6 md:grid-cols-2">
@@ -668,7 +676,7 @@ export function Component() {
             <div className="flex flex-wrap justify-center gap-4">
               <AnimatedButton
                 href="mailto:lavpatel39@gmail.com"
-                className="inline-flex h-10 items-center justify-center rounded-md bg-teal-600 px-8 text-sm font-medium text-white shadow transition-colors hover:bg-teal-500 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-teal-400"
+                className="inline-flex h-10 items-center justify-center rounded-md bg-blue-600 px-8 text-sm font-medium text-white shadow transition-colors hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-blue-400"
               >
                 Email Lav Patel
               </AnimatedButton>
@@ -686,7 +694,7 @@ export function Component() {
       </main>
 
       {/* ── Footer ── */}
-      <footer className="bg-slate-900 text-slate-400 py-8" aria-label="Site footer">
+      <footer className="bg-[#1a2744] text-slate-400 py-8" aria-label="Site footer">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div>
@@ -697,7 +705,7 @@ export function Component() {
                 ORCID:{" "}
                 <Link
                   href="https://orcid.org/0000-0002-8626-137X"
-                  className="hover:text-teal-400 transition-colors"
+                  className="hover:text-blue-400 transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -708,7 +716,7 @@ export function Component() {
             <div className="flex gap-4">
               <Link
                 href="https://www.linkedin.com/in/lav-patel/"
-                className="hover:text-teal-400 transition-colors"
+                className="hover:text-blue-400 transition-colors"
                 aria-label="LinkedIn"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -717,7 +725,7 @@ export function Component() {
               </Link>
               <Link
                 href="https://github.com/lav-patel"
-                className="hover:text-teal-400 transition-colors"
+                className="hover:text-blue-400 transition-colors"
                 aria-label="GitHub"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -726,7 +734,7 @@ export function Component() {
               </Link>
               <Link
                 href="https://x.com/lav_p_patel"
-                className="hover:text-teal-400 transition-colors"
+                className="hover:text-blue-400 transition-colors"
                 aria-label="X / Twitter"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -735,7 +743,7 @@ export function Component() {
               </Link>
               <Link
                 href="https://orcid.org/0000-0002-8626-137X"
-                className="hover:text-teal-400 transition-colors"
+                className="hover:text-blue-400 transition-colors"
                 aria-label="ORCID"
                 target="_blank"
                 rel="noopener noreferrer"
