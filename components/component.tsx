@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -8,7 +11,7 @@ import {
   Card,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { GithubIcon, TwitterIcon, ExternalLinkIcon } from "lucide-react";
+import { GithubIcon, TwitterIcon, ExternalLinkIcon, MenuIcon, XIcon } from "lucide-react";
 import AnimatedButton from "./AnimatedButton";
 
 const experiences = [
@@ -101,6 +104,13 @@ const publications = [
     year: "2023",
     tags: ["Machine Learning", "Federated Learning", "Outcomes"],
   },
+  {
+    title:
+      "Temporal Trends in COVID-19 Outcomes Across Multi-National EHR Networks",
+    journal: "EClinicalMedicine",
+    year: "2022",
+    tags: ["COVID-19", "Temporal Analysis", "4CE Consortium"],
+  },
 ];
 
 const skillCategories = [
@@ -163,6 +173,9 @@ const faqs = [
 ];
 
 export function Component() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const closeMobileMenu = () => setMobileMenuOpen(false);
+
   return (
     <div className="flex flex-col min-h-[100dvh]">
       {/* ── Header ── */}
@@ -170,75 +183,93 @@ export function Component() {
         className="px-4 lg:px-6 h-14 flex items-center bg-slate-900 text-white fixed left-0 right-0 z-50"
         aria-label="Site header"
       >
-        <Link className="flex items-center justify-center" href="/">
+        <Link className="flex items-center justify-center" href="/" onClick={closeMobileMenu}>
           <span className="text-teal-400 font-bold text-lg tracking-tight">LP</span>
           <span className="sr-only">Lav Patel</span>
         </Link>
-        <nav className="ml-auto flex gap-4 sm:gap-6" aria-label="Main navigation">
-          <Link className="text-sm font-medium hover:text-teal-400 transition-colors" href="/">
-            Home
-          </Link>
-          <Link className="text-sm font-medium hover:text-teal-400 transition-colors" href="#about">
-            About
-          </Link>
-          <Link className="text-sm font-medium hover:text-teal-400 transition-colors" href="#experience">
-            Experience
-          </Link>
-          <Link className="text-sm font-medium hover:text-teal-400 transition-colors" href="#publications">
-            Publications
-          </Link>
-          <Link className="text-sm font-medium hover:text-teal-400 transition-colors" href="#contact">
-            Contact
-          </Link>
+
+        {/* Desktop nav */}
+        <nav className="ml-auto hidden md:flex gap-4 lg:gap-6" aria-label="Main navigation">
+          <Link className="text-sm font-medium hover:text-teal-400 transition-colors" href="/">Home</Link>
+          <Link className="text-sm font-medium hover:text-teal-400 transition-colors" href="#about">About</Link>
+          <Link className="text-sm font-medium hover:text-teal-400 transition-colors" href="#experience">Experience</Link>
+          <Link className="text-sm font-medium hover:text-teal-400 transition-colors" href="#publications">Publications</Link>
+          <Link className="text-sm font-medium hover:text-teal-400 transition-colors" href="#contact">Contact</Link>
         </nav>
-        <div className="ml-4 flex gap-2" aria-label="Social links">
-          <Link
-            className="text-slate-400 hover:text-teal-400 transition-colors"
-            href="https://www.linkedin.com/in/lav-patel/"
-            aria-label="LinkedIn"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+
+        {/* Desktop social icons */}
+        <div className="ml-4 hidden md:flex gap-2" aria-label="Social links">
+          <Link className="text-slate-400 hover:text-teal-400 transition-colors" href="https://www.linkedin.com/in/lav-patel/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
             <LinkedinIcon className="h-5 w-5" />
           </Link>
-          <Link
-            className="text-slate-400 hover:text-teal-400 transition-colors"
-            href="https://x.com/lav_p_patel"
-            aria-label="X / Twitter"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <Link className="text-slate-400 hover:text-teal-400 transition-colors" href="https://x.com/lav_p_patel" aria-label="X / Twitter" target="_blank" rel="noopener noreferrer">
             <TwitterIcon className="h-5 w-5" />
           </Link>
-          <Link
-            className="text-slate-400 hover:text-teal-400 transition-colors"
-            href="https://github.com/lav-patel"
-            aria-label="GitHub"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <Link className="text-slate-400 hover:text-teal-400 transition-colors" href="https://github.com/lav-patel" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
             <GithubIcon className="h-5 w-5" />
           </Link>
-          <Link
-            className="text-slate-400 hover:text-teal-400 transition-colors"
-            href="https://orcid.org/0000-0002-8626-137X"
-            aria-label="ORCID"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <Link className="text-slate-400 hover:text-teal-400 transition-colors" href="https://orcid.org/0000-0002-8626-137X" aria-label="ORCID" target="_blank" rel="noopener noreferrer">
             <OrcidIcon className="h-5 w-5" />
           </Link>
         </div>
+
+        {/* Mobile hamburger */}
+        <button
+          className="ml-auto md:hidden text-slate-400 hover:text-white transition-colors p-1"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label="Toggle navigation menu"
+          aria-expanded={mobileMenuOpen}
+        >
+          {mobileMenuOpen ? <XIcon className="h-6 w-6" /> : <MenuIcon className="h-6 w-6" />}
+        </button>
       </header>
+
+      {/* Mobile dropdown menu */}
+      {mobileMenuOpen && (
+        <div className="fixed top-14 left-0 right-0 bg-slate-900 border-t border-slate-800 z-40 md:hidden shadow-lg">
+          <nav className="px-4 py-3 flex flex-col" aria-label="Mobile navigation">
+            {[
+              { label: "Home", href: "/" },
+              { label: "About", href: "#about" },
+              { label: "Experience", href: "#experience" },
+              { label: "Publications", href: "#publications" },
+              { label: "Contact", href: "#contact" },
+            ].map(({ label, href }) => (
+              <Link
+                key={href}
+                href={href}
+                onClick={closeMobileMenu}
+                className="py-3 text-sm font-medium text-slate-200 hover:text-teal-400 transition-colors border-b border-slate-800 last:border-0"
+              >
+                {label}
+              </Link>
+            ))}
+          </nav>
+          <div className="px-4 py-3 border-t border-slate-800 flex gap-4">
+            <Link className="text-slate-400 hover:text-teal-400 transition-colors" href="https://www.linkedin.com/in/lav-patel/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" onClick={closeMobileMenu}>
+              <LinkedinIcon className="h-5 w-5" />
+            </Link>
+            <Link className="text-slate-400 hover:text-teal-400 transition-colors" href="https://x.com/lav_p_patel" aria-label="X / Twitter" target="_blank" rel="noopener noreferrer" onClick={closeMobileMenu}>
+              <TwitterIcon className="h-5 w-5" />
+            </Link>
+            <Link className="text-slate-400 hover:text-teal-400 transition-colors" href="https://github.com/lav-patel" aria-label="GitHub" target="_blank" rel="noopener noreferrer" onClick={closeMobileMenu}>
+              <GithubIcon className="h-5 w-5" />
+            </Link>
+            <Link className="text-slate-400 hover:text-teal-400 transition-colors" href="https://orcid.org/0000-0002-8626-137X" aria-label="ORCID" target="_blank" rel="noopener noreferrer" onClick={closeMobileMenu}>
+              <OrcidIcon className="h-5 w-5" />
+            </Link>
+          </div>
+        </div>
+      )}
 
       <main className="flex-1 pt-14">
         {/* ── Hero ── */}
         <section
-          className="w-full min-h-[85vh] flex items-center bg-gradient-to-br from-slate-900 via-slate-800 to-teal-950"
+          className="w-full flex items-center bg-gradient-to-br from-slate-900 via-slate-800 to-teal-950 py-20 md:py-24"
           aria-label="Introduction"
         >
-          <div className="container px-4 md:px-6 py-16">
-            <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
+          <div className="container px-4 md:px-6">
+            <div className="grid gap-10 md:grid-cols-2 md:gap-12 items-center">
               <div className="space-y-6">
                 <div className="space-y-2">
                   <p className="text-teal-400 font-medium text-sm uppercase tracking-widest">
@@ -294,14 +325,14 @@ export function Component() {
                 </div>
               </div>
 
-              {/* Profile photo */}
-              <div className="flex justify-center lg:justify-end">
+              {/* Profile photo — shown first on mobile via order */}
+              <div className="flex justify-center md:justify-end order-first md:order-last">
                 <figure>
                   <Image
                     alt="Lav Patel, Healthcare Data and AI Infrastructure Leader at KUMC"
-                    className="rounded-2xl shadow-2xl ring-4 ring-teal-500/20"
-                    height={320}
-                    width={320}
+                    className="rounded-2xl shadow-2xl ring-4 ring-teal-500/30"
+                    height={380}
+                    width={380}
                     src="/lav-patel.jpeg"
                     priority={true}
                   />
@@ -323,7 +354,7 @@ export function Component() {
           <div className="container px-4 md:px-6">
             <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
               <article>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-slate-900">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-slate-900 border-b-2 border-teal-400 pb-2 inline-block">
                   About Lav Patel
                 </h2>
                 <p className="mt-4 text-slate-600 leading-relaxed">
@@ -398,16 +429,16 @@ export function Component() {
           aria-label="Work experience"
         >
           <div className="container px-4 md:px-6">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-slate-900 mb-10">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-slate-900 border-b-2 border-teal-400 pb-2 inline-block mb-10">
               Work Experience
             </h2>
             <div className="space-y-6">
               {experiences.map((exp, index) => (
                 <article
                   key={index}
-                  className="grid grid-cols-[140px_1fr] gap-6 items-start border-l-2 border-teal-200 pl-6 relative"
+                  className="grid grid-cols-[120px_1fr] gap-6 items-start border-l-2 border-teal-400 pl-6 relative"
                 >
-                  <div className="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-teal-500 border-2 border-white" />
+                  <div className="absolute -left-[9px] top-2 h-4 w-4 rounded-full bg-teal-500 ring-2 ring-white ring-offset-0" />
                   <div>
                     <time
                       className="text-sm text-slate-500 font-medium"
@@ -442,7 +473,7 @@ export function Component() {
           aria-label="Research collaborations"
         >
           <div className="container px-4 md:px-6">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-slate-900 mb-4">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-slate-900 border-b-2 border-teal-400 pb-2 inline-block mb-4">
               Research Collaborations
             </h2>
             <p className="text-slate-600 mb-10 max-w-2xl">
@@ -489,7 +520,7 @@ export function Component() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10">
               <div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-slate-900">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-slate-900 border-b-2 border-teal-400 pb-2 inline-block">
                   Publications
                 </h2>
                 <p className="text-slate-500 mt-1">
@@ -541,7 +572,7 @@ export function Component() {
           aria-label="Technical skills"
         >
           <div className="container px-4 md:px-6">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-slate-900 mb-10">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-slate-900 border-b-2 border-teal-400 pb-2 inline-block mb-10">
               Technical Skills
             </h2>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -574,7 +605,7 @@ export function Component() {
           aria-label="Education and credentials"
         >
           <div className="container px-4 md:px-6">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-slate-900 mb-10">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-slate-900 border-b-2 border-teal-400 pb-2 inline-block mb-10">
               Education &amp; Credentials
             </h2>
             <div className="grid gap-6 md:grid-cols-2">
@@ -607,7 +638,7 @@ export function Component() {
           aria-label="Frequently asked questions"
         >
           <div className="container px-4 md:px-6">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-slate-900 mb-10">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-slate-900 border-b-2 border-teal-400 pb-2 inline-block mb-10">
               Frequently Asked Questions
             </h2>
             <div className="grid gap-6 md:grid-cols-2">
@@ -743,6 +774,8 @@ function LinkedinIcon(props: React.SVGProps<SVGSVGElement>) {
 function OrcidIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
+      width="20"
+      height="20"
       {...props}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 256 256"
