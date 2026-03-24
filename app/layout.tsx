@@ -7,7 +7,10 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Lav Patel | Manager, Data and AI Architecture",
   description:
-    "Lav Patel is Manager, Data and AI Architecture at the University of Kansas Medical Center. Creator of CareScriptMD. EB-1 Extraordinary Ability holder. 24 peer-reviewed publications, 1,031 citations, h-index 17. npj Digital Medicine editorial board member. 4CE Consortium member.",
+    "Lav Patel — Manager, Data & AI Architecture at KUMC. Creator of CareScriptMD. EB-1 holder. 24 publications, 1,031 citations, h-index 17.",
+  icons: {
+    apple: "/apple-touch-icon.png",
+  },
   authors: [{ name: "Lav Patel", url: "https://lavpatel.com" }],
   robots: { index: true, follow: true },
   alternates: { canonical: "https://lavpatel.com" },

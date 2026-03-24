@@ -309,7 +309,7 @@ export function Component() {
                     Manager, Data and AI Architecture
                   </p>
                   <h1 className="text-5xl lg:text-6xl font-bold text-white text-balance">
-                    Lav Patel
+                    Lav Patel — Data &amp; AI Architect
                   </h1>
                   <p className="text-lg text-slate-300 max-w-lg">
                     Architecting AI products for healthcare at KUMC. Shipped CareScriptMD — an AI clinical documentation platform built on Whisper, Claude, and Llama. 24 publications. EB-1 Extraordinary Ability.
@@ -618,9 +618,9 @@ export function Component() {
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {skillCategories.map((category) => (
                 <div key={category.name}>
-                  <h3 className="text-sm font-semibold text-slate-500 uppercase tracking-wide mb-3">
+                  <p className="text-sm font-semibold text-slate-500 uppercase tracking-wide mb-3">
                     {category.name}
-                  </h3>
+                  </p>
                   <div className="flex flex-wrap gap-2">
                     {category.skills.map((skill) => (
                       <Badge
@@ -696,7 +696,7 @@ export function Component() {
             <div className="grid gap-6 md:grid-cols-2">
               {faqs.map((faq, index) => (
                 <div key={index} className="space-y-2">
-                  <h3 className="text-base font-semibold text-slate-900">{faq.question}</h3>
+                  <p className="text-base font-semibold text-slate-900">{faq.question}</p>
                   <p className="text-slate-600 text-sm leading-relaxed">{faq.answer}</p>
                 </div>
               ))}
