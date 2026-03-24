@@ -1,9 +1,36 @@
-# *
+# Allow all crawlers
 User-agent: *
 Allow: /
 
-# Host
-Host: https://lavpatel.com
+# Google — web + AI
+User-agent: Googlebot
+Allow: /
+User-agent: Google-Extended
+Allow: /
 
-# Sitemaps
+# OpenAI
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+
+# Anthropic Claude
+User-agent: ClaudeBot
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+# Apple
+User-agent: Applebot-Extended
+Allow: /
+
+# Microsoft Bing
+User-agent: Bingbot
+Allow: /
+
+# LLM-readable summary available at /llms.txt
+# ORCID: 0000-0002-8626-137X
+
 Sitemap: https://lavpatel.com/sitemap.xml
